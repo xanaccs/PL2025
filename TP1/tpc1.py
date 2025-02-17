@@ -1,19 +1,32 @@
-import re 
 import sys
 
-# Definição das expressões regulares pertinentes
-inteiro = r'[+\-]?\d+'
-on = r'[Oo][Nn]'
-off = r'[Oo][Ff]{2}'
-equal = r'='
+def on_off(texto):
 
-# Variável que irá armazenar o estado da soma
-soma = 0
-ativo = True
+    soma = 0
+    ligado = True  
+    resultado = []
+    
+    palavras = texto.split()
 
+    for palavra in palavras:
+        if palavra.lower() == 'off':
+            ligado = False
+            resultado.append("OfF")
+        elif palavra.lower() == 'on':
+            ligado = True
+            resultado.append("ON")
+        elif palavra == "=":
+            resultado.append(f">> {soma}")  
+        elif ligado:  
+            if palavra.isdigit():
+                soma += int(palavra)
+    
+    resultado.append(f">> {soma}")
+    
+    return "\n".join(resultado)
 
-
-
-                
 if __name__ == "__main__":
-    somador("exemplo.txt")
+    with open('exemplo.txt', 'r') as f:
+        texto_entrada = f.read()
+    print(texto_entrada)
+    print(on_off(texto_entrada))
