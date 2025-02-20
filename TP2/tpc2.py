@@ -1,15 +1,17 @@
-def ler_ficheiro(idade, modalidade, resultado):
-    ficheiro = open("emd.csv")
-    ficheiro.readline() 
-    for linha in ficheiro:
-        campos = linha.split(",")
-        idade.append(int(campos[5]))
-        modalidade.append(campos[8])
-        resultado.append(campos[12].rstrip())  # retirar a new line
-    ficheiro.close()
+def process_music_data(file_path):
+    with open(file_path, encoding="utf-8") as f:
+        lines = f.readlines()
+    
+    header = lines[0].strip().split(";")
+    data = [line.strip().split(";") for line in lines[1:]]
+    
+    compositores = sorted(set(row[4] for row in data if len(row) > 4))
 
-def modalidades_ordenadas(modalidade):
-    ordenado = sorted(set(modalidade))
-    print("\n----- Aqui estão as modalidades ordenadas: -----\n")
-    for mod in ordenado:
-        print(f"- {mod}")
+    periodos = {}
+    obras_periodo = {}
+    for row in data:
+        if len(row) > 3:
+            periodo = row[3]
+            titulo = row[0]
+            
+            periodos[periodo] = periodos.get(periodo, 0) + 1

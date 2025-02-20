@@ -6,4 +6,4 @@ Este repositório tem como objetivo armazenar todos os **trabalhos de casa** rea
 
 ## Autora
  - **Nome**: Alexandra Costa Coelho dos Santos
- - **Número Mecanográfico**: A94523
+ - **Número**: A94523
