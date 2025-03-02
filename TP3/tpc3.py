@@ -4,9 +4,9 @@ import sys
 def markdown_to_html(texto):
 
     # Cabeçalhos
-    texto = re.sub(r'^### (.*)', r'<h3>\1</h3>', texto)
-    texto = re.sub(r'^## (.*)', r'<h2>\1</h2>', texto)
-    texto = re.sub(r'^# (.*)', r'<h1>\1</h1>', texto)
+    texto = re.sub(r'^### (.*)', r'<h3>\1</h3>', texto, flags=re.MULTILINE)
+    texto = re.sub(r'^## (.*)', r'<h2>\1</h2>', texto, flags=re.MULTILINE)
+    texto = re.sub(r'^# (.*)', r'<h1>\1</h1>', texto, flags=re.MULTILINE)
     
     # Texto a Negrito
     texto = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', texto)
@@ -26,7 +26,7 @@ def markdown_to_html(texto):
     
     return texto
 
-def main(file="example.md"):
+def main(file="exemplo.md"):
     try:
         with open(file, "r", encoding="utf-8") as f:
             markdown = f.read()
@@ -39,5 +39,5 @@ def main(file="example.md"):
         print(f"Ocorreu um erro: {e}")
 
 if __name__ == "__main__":
-    file = sys.argv[1] if len(sys.argv) > 1 else "example.md"
+    file = sys.argv[1] if len(sys.argv) > 1 else "exemplo.md"
     main(file)
