@@ -32,5 +32,5 @@ O conversor suporta os seguintes elementos do Markdown:
 
 1. No terminal, execute o script passando o caminho para o arquivo Markdown como argumento:
    ```bash
-   python3 tpc3.py caminho/para/o/arquivo.md
+   python3 tpc3.py exemplo.md
 2. O script vai imprimir o conteúdo do arquivo Markdown que foi convertido para HTML, no terminal.
