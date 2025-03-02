@@ -1,36 +1,30 @@
-# [TPC3] Conversor de MarkDown para HTML
+# Conversor de Markdown para HTML
 
-# Conversor Markdown para HTML
-
-Este é um conversor simples de Markdown para HTML, desenvolvido em Python. O script converte os principais elementos da **Basic Syntax** do Markdown (como cabeçalhos, negrito, itálico, listas numeradas, links e imagens) para HTML.
+O tpc3 implementa um conversor de arquivos **Markdown** para **HTML** utilizando Python. O script lê um arquivo Markdown, converte seus elementos para HTML e guarda o resultado num arquivo de saída.
 
 ## Funcionalidades
 
 O conversor suporta os seguintes elementos do Markdown:
 
-- **Cabeçalhos**:
-  - `# Título` → `<h1>Título</h1>`
-  - `## Subtítulo` → `<h2>Subtítulo</h2>`
-  - `### Subsubtítulo` → `<h3>Subsubtítulo</h3>`
+- **Cabeçalhos**: Converte `#`, `##`, `###` em `<h1>`, `<h2>`, `<h3>`.
+- **Texto Negrito**: Converte o texto entre `**` em `<b>`.
+- **Texto Itálico**: Converte o texto entre `*` em `<i>`.
+- **Listas Numeradas**: Converte listas numeradas em uma lista ordenada HTML (`<ol><li>...</li></ol>`).
+- **Links**: Converte links de Markdown (`[texto](URL)`) para `<a href="URL">texto</a>`.
+- **Imagens**: Converte imagens de Markdown (`![alt text](URL)`) para a tag HTML `<img src="URL" alt="alt text"/>`.
 
-- **Texto em Negrito**:
-  - `**texto**` → `<b>texto</b>`
+## Como Funciona
 
-- **Texto em Itálico**:
-  - `*texto*` → `<i>texto</i>`
-
-- **Listas Numeradas**:
-  - `1. item` → `<ol><li>item</li></ol>`
-
-- **Links**:
-  - `[texto](URL)` → `<a href="URL">texto</a>`
-
-- **Imagens**:
-  - `![texto alternativo](URL)` → `<img src="URL" alt="texto alternativo"/>`
+1. O script lê um arquivo Markdown fornecido como argumento ou usa um arquivo padrão chamado `exemplo.md`.
+2. Utilizando as expressões regulares, o conteúdo do arquivo Markdown é processado e convertido para HTML.
+3. O resultado da conversão é gravado em um arquivo de saída (`resultado.html`).
 
 ## Como Usar
 
-1. No terminal, execute o script passando o caminho para o arquivo Markdown como argumento:
-   ```bash
-   python3 tpc3.py exemplo.md
-2. O script vai imprimir o conteúdo do arquivo Markdown que foi convertido para HTML, no terminal.
+1. Execução com os parâmetros padrão (arquivo de entrada `exemplo.md` e saída `resultado.html`):
+
+    ```bash
+    python3 tpc3.py
+    ```
+
+2. Caso o arquivo de entrada não seja encontrado ou haja outro erro, o script exibirá uma mensagem de erro.
