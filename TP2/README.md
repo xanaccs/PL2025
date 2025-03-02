@@ -1,4 +1,4 @@
-# TPC2: Análise de um dataset de obras musicais
+# [TPC2] Análise de um dataset de obras musicais
 
 ## Autor
  - **Nome**: Alexandra Costa Coelho dos Santos
