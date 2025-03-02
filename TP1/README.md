@@ -1,4 +1,4 @@
-# TPC1: Somador on/off 
+# [TPC1] Somador on/off 
 
 ## Autor
 Alexandra Santos, a94523
