@@ -1,9 +1,10 @@
 # [TPC1] Somador on/off 
 
-## Autor
-Alexandra Santos, a94523
+## 👤 Autor  
+ - **Nome**: Alexandra Costa Coelho dos Santos
+ - **Número**: A94523
 
-## Resumo
+## 📜 Resumo  
 
 1. Pretende-se um programa que some todas as sequências de dígitos que encontre num texto;
 
@@ -14,6 +15,7 @@ Alexandra Santos, a94523
 4. Sempre que encontrar o caráter “=”, o resultado da soma é colocado na saída.
 
 
+## 🚀 Como Executar
 Como testar o programa:
 ```
 cat exemplo.txt | python3 tpc1.py

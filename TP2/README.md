@@ -5,7 +5,7 @@
  - **Número**: A94523
 
 
-## Resumo  
+## 📜 Resumo 
 Este TPC tem como objetivo processar um dataset de obras musicais sem utilizar o módulo `csv` do Python.  
 O programa lê um ficheiro `obras.csv`, extrai os dados relevantes e gera três resultados:  
 
@@ -15,7 +15,7 @@ O programa lê um ficheiro `obras.csv`, extrai os dados relevantes e gera três 
 
 Os resultados são guardados num ficheiro `output.txt`.  
 
-## Lista de Resultados  
+## 📂 Lista de Resultados 
 - [obras.csv](./obras.csv) - Ficheiro de entrada com os dados das obras musicais.  
 - [tpc2.py](./tpc2.py) - Código Python que processa os dados e gera os resultados.  
 - [output.txt](./output.txt) - Ficheiro de saída com os resultados gerados pelo programa.  

@@ -1,9 +1,13 @@
-# Conversor de Markdown para HTML
+# [TPC4] Conversor de Markdown para HTML
 
+## 👤 Autor  
+ - **Nome**: Alexandra Costa Coelho dos Santos
+ - **Número**: A94523
+
+## 📜 Descrição
 O tpc3 implementa um conversor de arquivos **Markdown** para **HTML** utilizando Python. O script lê um arquivo Markdown, converte seus elementos para HTML e guarda o resultado num arquivo de saída.
 
-## Funcionalidades
-
+## ⚙️ Funcionalidades
 O conversor suporta os seguintes elementos do Markdown:
 
 - **Cabeçalhos**: Converte `#`, `##`, `###` em `<h1>`, `<h2>`, `<h3>`.
@@ -13,13 +17,13 @@ O conversor suporta os seguintes elementos do Markdown:
 - **Links**: Converte links de Markdown (`[texto](URL)`) para `<a href="URL">texto</a>`.
 - **Imagens**: Converte imagens de Markdown (`![alt text](URL)`) para a tag HTML `<img src="URL" alt="alt text"/>`.
 
-## Como Funciona
+## 🛠️ Como Funciona
 
 1. O script lê um arquivo Markdown fornecido como argumento ou usa um arquivo padrão chamado `exemplo.md`.
 2. Utilizando as expressões regulares, o conteúdo do arquivo Markdown é processado e convertido para HTML.
 3. O resultado da conversão é gravado em um arquivo de saída (`resultado.html`).
 
-## Como Usar
+## 🚀 Como Executar
 
 1. Execução com os parâmetros padrão (arquivo de entrada `exemplo.md` e saída `resultado.html`):
 
